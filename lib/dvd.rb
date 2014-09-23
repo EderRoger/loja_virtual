@@ -2,12 +2,12 @@ class DVD < Midia
 
     attr_reader :titulo
 
-    extend FormatadorMoeda
+    include FormatadorMoeda
 
     formata_moeda :valor_com_desconto, :valor
 
 	def initialize(titulo, valor, categoria)
-		super()
+		super
 		@titulo = titulo
 		@valor = valor
 		@categoria = categoria
